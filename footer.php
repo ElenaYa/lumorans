@@ -93,8 +93,10 @@
             <div class="cookie-text">
                 <h4>Evästeiden Käyttö</h4>
                 <p>Käytämme evästeitä parantaaksemme käyttökokemustasi ja analysoidaksemme sivuston käyttöä.</p>
+                <a href="cookies.php" class="cookie-link">Lue Evästekäytäntö</a>
             </div>
             <div class="cookie-actions">
+                <button class="cookie-btn cookie-settings" id="cookieSettings">Asetukset</button>
                 <button class="cookie-btn cookie-customize" id="cookieCustomize">Mukauta</button>
                 <button class="cookie-btn cookie-accept" id="cookieAccept">Hyväksy Kaikki</button>
             </div>

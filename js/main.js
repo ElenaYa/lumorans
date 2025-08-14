@@ -81,6 +81,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update aria-expanded
             const isExpanded = navMenu.classList.contains('active');
             navToggle.setAttribute('aria-expanded', isExpanded);
+            navToggle.setAttribute('aria-controls', 'navMenu');
+
+            // Adjust menu padding to avoid overlapping the header
+            if (isExpanded) {
+                const headerHeight = header ? header.offsetHeight : 0;
+                navMenu.style.paddingTop = headerHeight ? `${headerHeight}px` : navMenu.style.paddingTop;
+                document.documentElement.style.setProperty('--header-offset', `${headerHeight}px`);
+            } else {
+                navMenu.style.paddingTop = '';
+                document.documentElement.style.removeProperty('--header-offset');
+            }
         }
 
         closeMenu() {
@@ -105,6 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         handleScroll() {
+            // Skip header hide/show while mobile menu is open
+            if (document.body.classList.contains('nav-open')) {
+                return;
+            }
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             // Add/remove scrolled class

@@ -1,5 +1,4 @@
 <?php
-// Get current page for active navigation
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 <!DOCTYPE html>
@@ -20,7 +19,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         <meta name="keywords" content="web design, app design, ui/ux, futuristinen suunnittelu, digitaalinen kokemus, käyttöliittymä">
     <?php endif; ?>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +26,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
   
     <link rel="stylesheet" href="css/complete-styles.css">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 <body>

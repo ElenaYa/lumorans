@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Banner buttons
             const acceptAllBtn = document.getElementById('cookieAccept');
             const customizeBtn = document.getElementById('cookieCustomize');
+            const settingsBtn = document.getElementById('cookieSettings');
             const closeBtn = document.getElementById('cookieClose');
             const saveBtn = document.getElementById('cookieSave');
 
@@ -52,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (customizeBtn) {
                 customizeBtn.addEventListener('click', () => this.showCustomizeModal());
+            }
+
+            if (settingsBtn) {
+                settingsBtn.addEventListener('click', () => this.showCustomizeModal());
             }
 
             if (closeBtn) {
