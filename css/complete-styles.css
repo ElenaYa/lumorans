@@ -756,6 +756,10 @@ li::marker {
     transition: all var(--transition-normal);
 }
 
+.navbar.glass-panel {
+    overflow: visible;
+}
+
 .main-header.scrolled {
     background: rgba(10, 10, 15, 0.95);
     box-shadow: var(--shadow-soft);
@@ -1070,6 +1074,18 @@ li::marker {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* Default background for all internal pages (not index, not 404) */
+.page-header .page-header-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/page-header-content.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    pointer-events: none;
 }
 
 .page-title {
@@ -3476,8 +3492,9 @@ li::marker {
     }
     
     .hero-visual {
-        order: -1;
-        margin-bottom: 2rem;
+        order: 2;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
     }
     
     .toc-container {
@@ -3493,36 +3510,43 @@ li::marker {
         --grid-gap: 1rem;
     }
     
+    .hero-visual {
+        order: 2;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+    }
+
     /* Mobile Navigation */
     .nav-menu {
         position: fixed;
         top: var(--header-offset, 0);
         left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100vw;
+        height: 0;
         z-index: 9998;
         background: rgba(10, 10, 15, 0.95);
         backdrop-filter: var(--glass-blur);
         border-top: 1px solid var(--glass-border);
-        transition: all var(--transition-normal);
+        transition: opacity var(--transition-normal), visibility var(--transition-normal), height var(--transition-normal);
         opacity: 0;
         visibility: hidden;
-        max-height: 0;
         overflow: hidden;
+        padding-bottom: max(2rem, env(safe-area-inset-bottom));
     }
     
     .nav-menu.active {
         opacity: 1;
         visibility: visible;
-        max-height: 100vh;
+        height: calc(100dvh - var(--header-offset, 0));
         overflow: auto;
         z-index: 9999;
+        -webkit-overflow-scrolling: touch;
     }
     
     .nav-list {
         flex-direction: column;
         gap: 0;
-        padding: 6rem 2rem 2rem;
+        padding: 1.25rem 2rem 2rem;
     }
     
     .nav-link {
@@ -3542,6 +3566,10 @@ li::marker {
     
     .nav-toggle {
         display: flex;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 10000;
     }
     
     /* Grid Adjustments */

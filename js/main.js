@@ -57,6 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.addEventListener('click', this.closeMenu.bind(this));
                 });
 
+                // Prevent scroll bleed when touching inside the menu
+                navMenu.addEventListener('touchmove', (e) => {
+                    if (navMenu.classList.contains('active')) {
+                        e.stopPropagation();
+                    }
+                }, { passive: false });
+
                 // Close menu when clicking outside
                 document.addEventListener('click', (e) => {
                     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
@@ -73,6 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        updateHeaderOffset() {
+            const headerHeight = header ? header.offsetHeight : 0;
+            document.documentElement.style.setProperty('--header-offset', `${headerHeight}px`);
+            navMenu.style.paddingTop = headerHeight ? `${headerHeight}px` : '';
+            navMenu.style.height = `calc(100dvh - ${headerHeight}px)`;
+        }
+
         toggleMenu() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
@@ -83,14 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.setAttribute('aria-expanded', isExpanded);
             navToggle.setAttribute('aria-controls', 'navMenu');
 
-            // Adjust menu padding to avoid overlapping the header
             if (isExpanded) {
-                const headerHeight = header ? header.offsetHeight : 0;
-                navMenu.style.paddingTop = headerHeight ? `${headerHeight}px` : navMenu.style.paddingTop;
-                document.documentElement.style.setProperty('--header-offset', `${headerHeight}px`);
+                this.updateHeaderOffset();
+                this._resizeHandler = this.updateHeaderOffset.bind(this);
+                window.addEventListener('resize', this._resizeHandler);
             } else {
                 navMenu.style.paddingTop = '';
+                navMenu.style.height = '';
                 document.documentElement.style.removeProperty('--header-offset');
+                if (this._resizeHandler) {
+                    window.removeEventListener('resize', this._resizeHandler);
+                    this._resizeHandler = null;
+                }
             }
         }
 
@@ -99,6 +117,13 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.classList.remove('active');
             body.classList.remove('nav-open');
             navToggle.setAttribute('aria-expanded', false);
+            navMenu.style.paddingTop = '';
+            navMenu.style.height = '';
+            document.documentElement.style.removeProperty('--header-offset');
+            if (this._resizeHandler) {
+                window.removeEventListener('resize', this._resizeHandler);
+                this._resizeHandler = null;
+            }
         }
     }
 

@@ -26,14 +26,14 @@ include 'header.php';
             </div>
             
             <div class="error-actions">
-                <a href="index.php" class="cta-primary">
+                <a href="index.php" class="btn btn-primary">
                     <span>Palaa Etusivulle</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 12H5"/>
                         <path d="m12 19-7-7 7-7"/>
                     </svg>
                 </a>
-                <a href="contact.php" class="cta-secondary">
+                <a href="contact.php" class="btn btn-secondary">
                     <span>Ota Yhteyttä</span>
                 </a>
             </div>
@@ -195,6 +195,18 @@ include 'header.php';
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 3rem;
+}
+
+.error-actions .btn {
+    padding: 0.9rem 1.75rem;
+}
+
+.error-actions .btn svg {
+    transition: transform 0.3s ease;
+}
+
+.error-actions .btn:hover svg {
+    transform: translateX(2px);
 }
 
 .error-search {
