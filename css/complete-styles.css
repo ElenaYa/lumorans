@@ -2602,6 +2602,23 @@ li::marker {
     max-height: 1000px;
 }
 
+/* Static FAQ: show answers as panels, no accordion */
+.faq-static .faq-question {
+    cursor: default;
+    color: var(--text-primary);
+}
+.faq-static .faq-question .faq-icon { display: none; }
+.faq-static .faq-answer {
+    max-height: none;
+    overflow: visible;
+    padding: 0 2rem 2rem;
+}
+.faq-static .faq-answer[aria-hidden],
+.faq-static .faq-answer:not(.active) {
+    max-height: none;
+    overflow: visible;
+}
+
 .faq-answer p {
     color: var(--text-secondary);
     line-height: 1.7;
@@ -2638,6 +2655,13 @@ li::marker {
 .faq-cta-content p {
     margin-bottom: 2rem;
     color: var(--text-secondary);
+}
+
+/* Align CTA buttons with global button system */
+.cta-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* ==================== FORM COMPONENTS ==================== */

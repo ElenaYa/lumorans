@@ -16,7 +16,7 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="faq-section section-padding">
+<section class="faq-section section-padding faq-static">
     <div class="container">
         <div class="faq-content">
             <!-- FAQ Categories -->
@@ -34,9 +34,7 @@
                 <div class="faq-item glass-panel animate-on-scroll" data-category="pricing" id="pricing" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                         <span>Miten hinnoittelunne toimii?</span>
-                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
+                    
                     </button>
                     <div class="faq-answer" id="faq-answer-1" aria-hidden="true">
                         <p>Hinnoittelumme perustuu projektin laajuuteen, monimutkaisuuteen ja aikatauluun. Tarjoamme läpinäkyvää hinnoittelua ilman piilokustannuksia:</p>
@@ -317,7 +315,7 @@
             <div class="faq-cta-content glass-panel">
                 <h3>Eikö kysymyksesi löytynyt listalta?</h3>
                 <p>Ota rohkeasti yhteyttä, niin vastaamme kaikkiin kysymyksiisi henkilökohtaisesti.</p>
-                <a href="contact.php" class="cta-primary">
+                <a href="contact.php" class="btn btn-primary">
                     <span>Kysy Meiltä</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14"/>
