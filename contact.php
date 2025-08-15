@@ -15,6 +15,55 @@
     </div>
 </section>
 
+<!-- Intro Vision Section -->
+<section class="vision-section section-padding">
+    <div class="container">
+        <div class="vision-content">
+            <div class="vision-text">
+                <h2 class="section-title">Yhteistyö, joka vie ideasi pidemmälle</h2>
+                <p class="vision-lead">
+                    Rakennamme kestäviä, kauniita ja nopeita digitaalisia kokemuksia yhdistämällä selkeän strategian, tinkimättömän designin ja tehokkaan toteutuksen. Kerro mitä haluat saavuttaa – me autamme jalostamaan sen selkeäksi tiekartaksi ja viemään sen läpi huolella, sprintti sprintiltä.
+                </p>
+                <div class="vision-points">
+                    <div class="vision-point glass-panel">
+                        <div class="vision-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                        </div>
+                        <div>
+                            <h4>Selkeä suunta</h4>
+                            <p>Autamme sanoittamaan tavoitteen ja rajaamaan työn – näin eteneminen on läpinäkyvää.</p>
+                        </div>
+                    </div>
+                    <div class="vision-point glass-panel">
+                        <div class="vision-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h6l3 8 3-16 3 8h3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Nopea iterointi</h4>
+                            <p>Pienet releaset, jatkuva palaute ja mitattava edistyminen jokaisessa vaiheessa.</p>
+                        </div>
+                    </div>
+                    <div class="vision-point glass-panel">
+                        <div class="vision-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <div>
+                            <h4>Laadun varmistus</h4>
+                            <p>Design-testaus, saavutettavuus ja suorituskyky sisäänrakennettuna prosessiin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vision-visual">
+                <div class="vision-image-container">
+                    <img src="img/futuristic-image.webp" alt="Vision" class="vision-image" loading="lazy" width="520" height="360">
+                    <div class="vision-image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
 <!-- Contact Section -->
 <section class="contact-section section-padding">
     <div class="container">
@@ -32,32 +81,27 @@
                 <form class="contact-form glass-panel" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="firstName">Etunimi</label>
+                            <label for="firstName">Etunimi <span class="required">*</span></label>
                             <input type="text" id="firstName" name="first_name" required>
                             <div class="input-border"></div>
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Sukunimi</label>
+                            <label for="lastName">Sukunimi <span class="required">*</span></label>
                             <input type="text" id="lastName" name="last_name" required>
                             <div class="input-border"></div>
                         </div>
                     </div>
                     
-                    <div class="form-row">
+                    <div class="form-group">
                         <div class="form-group">
-                            <label for="email">Sähköposti</label>
+                            <label for="email">Sähköposti <span class="required">*</span></label>
                             <input type="email" id="email" name="email" required>
-                            <div class="input-border"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Yritys (valinnainen)</label>
-                            <input type="text" id="company" name="company">
                             <div class="input-border"></div>
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="service">Palvelu</label>
+                        <label for="service">Palvelu <span class="required">*</span></label>
                         <select id="service" name="service" required>
                             <option value="">Valitse palvelu</option>
                             <option value="web-design">Web Design</option>
@@ -83,39 +127,16 @@
                         </select>
                         <div class="input-border"></div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="timeline">Aikataulu</label>
-                        <select id="timeline" name="timeline">
-                            <option value="">Valitse aikataulu</option>
-                            <option value="asap">Mahdollisimman pian</option>
-                            <option value="1-month">1 kuukauden sisällä</option>
-                            <option value="3-months">3 kuukauden sisällä</option>
-                            <option value="6-months">6 kuukauden sisällä</option>
-                            <option value="flexible">Joustava</option>
-                        </select>
-                        <div class="input-border"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Projektin Kuvaus</label>
+                     <div class="form-group">
+                        <label for="message">Projektin Kuvaus <span class="required">*</span></label>
                         <textarea id="message" name="message" rows="6" placeholder="Kerro meille projektistasi, tavoitteistasi ja visiostasi..." required></textarea>
                         <div class="input-border"></div>
                     </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="newsletter" id="newsletter">
-                            <span class="checkmark"></span>
-                            Haluan tilata uutiskirjeen ja saada vinkkejä web-suunnittelusta
-                        </label>
-                    </div>
-                    
                     <div class="form-group checkbox-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="privacy" required>
                             <span class="checkmark"></span>
-                            Hyväksyn <a href="privacy.php" target="_blank">tietosuojakäytännön</a> ja suostun tietojeni käsittelyyn
+                            <span class="checkbox-text">Hyväksyn <a href="privacy.php" target="_blank">tietosuojakäytännön</a> ja suostun tietojeni käsittelyyn</span>
                         </label>
                     </div>
                     
@@ -175,9 +196,47 @@
                         </div>
                     </div>
                 </div>
-                
+           
+                <!-- FAQ Quick Links -->
+                <div class="faq-links glass-panel">
+                    <h3 class="faq-title">Usein Kysytyt Kysymykset</h3>
+                    <div class="faq-quick-links">
+                        <a href="faq.php#pricing" class="faq-link">
+                            <span>Hinnoittelu</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="faq.php#timeline" class="faq-link">
+                            <span>Projektin Kesto</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="faq.php#process" class="faq-link">
+                            <span>Työskentelyprosessi</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="faq.php#support" class="faq-link">
+                            <span>Tuki & Ylläpito</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+             
                 <!-- Process Overview -->
-                <div class="process-overview glass-panel">
+                <div class="process-overview glass-panel" style="margin-top: 40px;">
                     <h3 class="process-title">Miten Etenemme</h3>
                     <div class="process-steps">
                         <div class="process-step">
@@ -214,42 +273,6 @@
                     </div>
                 </div>
                 
-                <!-- FAQ Quick Links -->
-                <div class="faq-links glass-panel">
-                    <h3 class="faq-title">Usein Kysytyt Kysymykset</h3>
-                    <div class="faq-quick-links">
-                        <a href="faq.php#pricing" class="faq-link">
-                            <span>Hinnoittelu</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="faq.php#timeline" class="faq-link">
-                            <span>Projektin Kesto</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="faq.php#process" class="faq-link">
-                            <span>Työskentelyprosessi</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        </a>
-                        <a href="faq.php#support" class="faq-link">
-                            <span>Tuki & Ylläpito</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14"/>
-                                <path d="m12 5 7 7-7 7"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -267,11 +290,7 @@
             </p>
             <div class="cta-actions">
                 <a href="index.php" class="btn btn-primary">
-                    <span>Lähetä Suora Viesti</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
+                    <span>Palaa Etusivulle</span>
                 </a>
                 <a href="faq.php" class="btn btn-secondary">
                     <span>Lue FAQ</span>
