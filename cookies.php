@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -18,40 +17,37 @@
     </div>
 </section>
 
-<!-- Cookie Policy Content -->
 <section class="legal-content section-padding">
     <div class="container">
-        <div class="legal-document">
-            <!-- Cookie Settings Panel -->
-            <div class="cookie-settings-panel glass-panel animate-on-scroll">
-                <h3>Evästeasetukset</h3>
-                <p>Voit hallita evästeasetuksiasi alla olevilla painikkeilla:</p>
-                <div class="cookie-controls">
-                    <button class="cookie-btn manage-cookies" id="manageCookies">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 1v6m0 6v6"/>
-                            <path d="m17 5-6 6-6-6"/>
-                        </svg>
-                        Hallitse Evästeitä
-                    </button>
-                    <button class="cookie-btn accept-all" id="acceptAllCookies">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4"/>
-                            <circle cx="12" cy="12" r="10"/>
-                        </svg>
-                        Hyväksy Kaikki
-                    </button>
-                    <button class="cookie-btn reject-optional" id="rejectOptional">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"/>
-                            <line x1="6" y1="6" x2="18" y2="18"/>
-                        </svg>
-                        Hylkää Valinnaiset
-                    </button>
-                </div>
+        <div class="cookie-settings-panel glass-panel animate-on-scroll" style="margin-bottom: 2rem;">
+            <h3>Evästeasetukset</h3>
+            <p>Voit hallita evästeasetuksiasi alla olevilla painikkeilla:</p>
+            <div class="cookie-controls">
+                <button class="cookie-btn manage-cookies" id="manageCookies">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1v6m0 6v6"/>
+                        <path d="m17 5-6 6-6-6"/>
+                    </svg>
+                    Hallitse Evästeitä
+                </button>
+                <button class="cookie-btn accept-all" id="acceptAllCookies">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                    Hyväksy Kaikki
+                </button>
+                <button class="cookie-btn reject-optional" id="rejectOptional">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                    Hylkää Valinnaiset
+                </button>
             </div>
-            
-            <!-- Table of Contents -->
+        </div>
+
+        <div class="legal-document">
             <div class="toc-container glass-panel animate-on-scroll">
                 <h3>Sisällysluettelo</h3>
                 <ul class="toc">
@@ -67,7 +63,6 @@
             </div>
             
             <div class="legal-sections">
-                <!-- What are Cookies -->
                 <section id="what-are-cookies" class="legal-section animate-on-scroll">
                     <h2>1. Mitä Evästeet Ovat</h2>
                     
@@ -97,7 +92,6 @@
                     </div>
                 </section>
                 
-                <!-- Cookie Types -->
                 <section id="cookie-types" class="legal-section animate-on-scroll">
                     <h2>2. Evästetyypit</h2>
                     
@@ -167,7 +161,6 @@
                     </div>
                 </section>
                 
-                <!-- Our Cookies -->
                 <section id="our-cookies" class="legal-section animate-on-scroll">
                     <h2>3. Meidän Käyttämämme Evästeet</h2>
                     
@@ -286,7 +279,6 @@
                     </div>
                 </section>
                 
-                <!-- Third Party Cookies -->
                 <section id="third-party-cookies" class="legal-section animate-on-scroll">
                     <h2>4. Kolmannen Osapuolen Evästeet</h2>
                     
@@ -330,7 +322,6 @@
                     </div>
                 </section>
                 
-                <!-- Cookie Management -->
                 <section id="cookie-management" class="legal-section animate-on-scroll">
                     <h2>5. Evästeiden Hallinta</h2>
                     
@@ -430,7 +421,6 @@
                     </ul>
                 </section>
                 
-                <!-- Cookie Purposes -->
                 <section id="cookie-purposes" class="legal-section animate-on-scroll">
                     <h2>6. Käyttötarkoitukset Yksityiskohtaisesti</h2>
                     
@@ -468,7 +458,6 @@
                     </ul>
                 </section>
                 
-                <!-- Data Retention -->
                 <section id="data-retention" class="legal-section animate-on-scroll">
                     <h2>7. Tietojen Säilyttäminen</h2>
                     
@@ -526,7 +515,6 @@
                     </ul>
                 </section>
                 
-                <!-- Updates -->
                 <section id="cookie-updates" class="legal-section animate-on-scroll">
                     <h2>8. Päivitykset ja Muutokset</h2>
                     

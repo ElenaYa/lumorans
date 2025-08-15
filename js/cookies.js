@@ -1,14 +1,12 @@
-// Lumorans - Cookie Management JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    // Cookie Management System
     class CookieManager {
         constructor() {
             this.cookieName = 'lumorans_cookie_consent';
             this.consentData = {
-                essential: true, // Always required
+                essential: true, 
                 analytical: false,
                 functional: false,
                 marketing: false,
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initEventListeners() {
-            // Banner buttons
             const acceptAllBtn = document.getElementById('cookieAccept');
             const customizeBtn = document.getElementById('cookieCustomize');
             const settingsBtn = document.getElementById('cookieSettings');
@@ -67,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 saveBtn.addEventListener('click', () => this.saveCustomSettings());
             }
 
-            // Page controls (on cookies.php)
             const manageCookiesBtn = document.getElementById('manageCookies');
             const acceptAllPageBtn = document.getElementById('acceptAllCookies');
             const rejectOptionalBtn = document.getElementById('rejectOptional');
@@ -89,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 saveSettingsBtn.addEventListener('click', () => this.savePageSettings());
             }
 
-            // Modal backdrop clicks
             const modal = document.getElementById('cookieModal');
             if (modal) {
                 modal.addEventListener('click', (e) => {
@@ -99,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // Keyboard navigation
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     this.hideCustomizeModal();
@@ -114,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     banner.style.display = 'flex';
                     banner.classList.add('show');
                     
-                    // Animate in
                     setTimeout(() => {
                         banner.style.transform = 'translateY(0)';
                         banner.style.opacity = '1';
@@ -162,19 +155,16 @@ document.addEventListener('DOMContentLoaded', function() {
         showCustomizeModal() {
             const modal = document.getElementById('cookieModal');
             if (modal) {
-                // Update toggle states
                 this.updateModalToggles();
                 
                 modal.style.display = 'flex';
                 modal.classList.add('show');
                 
-                // Focus management
                 const firstInput = modal.querySelector('input, button');
                 if (firstInput) {
                     firstInput.focus();
                 }
                 
-                // Prevent body scroll
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -185,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.classList.remove('show');
                 modal.style.display = 'none';
                 
-                // Restore body scroll
                 document.body.style.overflow = '';
             }
         }
@@ -206,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         saveCustomSettings() {
-            // Get current toggle states from modal
             const analytical = document.getElementById('analyticalCookies')?.checked || false;
             const functional = document.getElementById('functionalCookies')?.checked || false;
             const marketing = document.getElementById('marketingCookies')?.checked || false;
@@ -228,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         savePageSettings() {
-            // Get current toggle states from page
             const analytical = document.getElementById('analyticsToggle')?.checked || false;
             const functional = document.getElementById('functionalToggle')?.checked || false;
             const marketing = document.getElementById('marketingToggle')?.checked || false;
@@ -248,7 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initPageControls() {
-            // Initialize toggle states on cookies page
             const analyticsToggle = document.getElementById('analyticsToggle');
             const functionalToggle = document.getElementById('functionalToggle');
             const marketingToggle = document.getElementById('marketingToggle');
@@ -276,126 +262,67 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         applyConsentSettings() {
-            // Apply analytical cookies
             if (this.consentData.analytical) {
                 this.enableAnalytics();
             } else {
                 this.disableAnalytics();
             }
 
-            // Apply functional cookies
             if (this.consentData.functional) {
                 this.enableFunctionalCookies();
             } else {
                 this.disableFunctionalCookies();
             }
 
-            // Apply marketing cookies
             if (this.consentData.marketing) {
                 this.enableMarketingCookies();
             } else {
                 this.disableMarketingCookies();
             }
 
-            // Always enable essential cookies
             this.enableEssentialCookies();
         }
 
         enableAnalytics() {
-            // Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted'
-                });
-            }
-
-            // Load Google Analytics if not already loaded
-            if (!window.ga && !window.gtag) {
-                this.loadGoogleAnalytics();
-            }
-
-            // Hotjar
+        
             this.loadHotjar();
         }
 
         disableAnalytics() {
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'denied'
-                });
-            }
-
-            // Clear analytics cookies
             this.clearCookiesByPattern(/^_ga/);
             this.clearCookiesByPattern(/^_gid/);
             this.clearCookiesByPattern(/^_hjid/);
         }
 
         enableFunctionalCookies() {
-            // Enable user preferences saving
             this.functionalCookiesEnabled = true;
             
-            // Load user preferences
             this.loadUserPreferences();
         }
 
         disableFunctionalCookies() {
             this.functionalCookiesEnabled = false;
             
-            // Clear functional cookies
             this.clearCookiesByPattern(/^user_preferences/);
             this.clearCookiesByPattern(/^theme_mode/);
         }
 
         enableMarketingCookies() {
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'ad_storage': 'granted'
-                });
-            }
-
-            // Load marketing scripts
             this.loadMarketingScripts();
         }
 
         disableMarketingCookies() {
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'ad_storage': 'denied'
-                });
-            }
-
-            // Clear marketing cookies
             this.clearCookiesByPattern(/^_fbp/);
             this.clearCookiesByPattern(/^_fbc/);
         }
 
         enableEssentialCookies() {
-            // Essential cookies are always enabled
-            // Set session cookies, CSRF tokens, etc.
-            this.setCookie('session_active', 'true', 0); // Session cookie
+           
+            this.setCookie('session_active', 'true', 0); 
         }
 
-        loadGoogleAnalytics() {
-            // Google Analytics 4
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-            document.head.appendChild(script);
-
-            script.onload = () => {
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'GA_MEASUREMENT_ID', {
-                    anonymize_ip: true,
-                    cookie_flags: 'secure;samesite=lax'
-                });
-            };
-        }
 
         loadHotjar() {
-            // Hotjar tracking code
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                 h._hjSettings={hjid:123456,hjsv:6};
@@ -407,8 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         loadMarketingScripts() {
-            // Facebook Pixel, LinkedIn Insight, etc.
-            // Add your marketing scripts here
+          
         }
 
         loadUserPreferences() {
@@ -416,7 +342,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (preferences) {
                 try {
                     const data = JSON.parse(preferences);
-                    // Apply user preferences
                     if (data.theme) {
                         document.body.classList.add(`theme-${data.theme}`);
                     }
@@ -433,7 +358,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const [name] = cookie.trim().split('=');
                 if (pattern.test(name)) {
                     this.deleteCookie(name);
-                    // Also try to delete with different domain and path combinations
                     this.deleteCookie(name, '/');
                     this.deleteCookie(name, '/', window.location.hostname);
                     this.deleteCookie(name, '/', '.' + window.location.hostname);
@@ -442,7 +366,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         showNotification(message, type = 'info') {
-            // Create notification element
             const notification = document.createElement('div');
             notification.className = `cookie-notification ${type}`;
             notification.innerHTML = `
@@ -452,20 +375,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
 
-            // Add to page
             document.body.appendChild(notification);
 
-            // Animate in
             setTimeout(() => {
                 notification.classList.add('show');
             }, 100);
 
-            // Auto-hide after 3 seconds
             setTimeout(() => {
                 this.hideNotification(notification);
             }, 3000);
 
-            // Close button
             const closeBtn = notification.querySelector('.notification-close');
             closeBtn.addEventListener('click', () => {
                 this.hideNotification(notification);
@@ -481,7 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         }
 
-        // Utility methods for cookie operations
         setCookie(name, value, days, path = '/', secure = true) {
             let expires = '';
             if (days) {
@@ -513,7 +431,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=${path}${domainString}`;
         }
 
-        // Public API methods
         getConsentStatus() {
             return this.consentData;
         }
@@ -541,7 +458,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Additional CSS for notifications
     const notificationStyles = `
         .cookie-notification {
             position: fixed;
@@ -612,37 +528,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
 
-    // Inject notification styles
     const styleSheet = document.createElement('style');
     styleSheet.textContent = notificationStyles;
     document.head.appendChild(styleSheet);
 
-    // Initialize cookie manager
     const cookieManager = new CookieManager();
 
-    // Make cookie manager globally available
     window.LumoransCookies = cookieManager;
 
-    // Google Consent Mode initialization
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    
-    // Default consent state
-    gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'functionality_storage': 'denied',
-        'personalization_storage': 'denied'
-    });
-
-    // Update consent based on saved preferences
-    if (cookieManager.hasConsent()) {
-        const consent = cookieManager.getConsentStatus();
-        gtag('consent', 'update', {
-            'analytics_storage': consent.analytical ? 'granted' : 'denied',
-            'ad_storage': consent.marketing ? 'granted' : 'denied',
-            'functionality_storage': consent.functional ? 'granted' : 'denied',
-            'personalization_storage': consent.functional ? 'granted' : 'denied'
-        });
-    }
 });

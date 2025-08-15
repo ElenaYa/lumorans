@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -16,7 +15,6 @@
 </section>
 
 
-<!-- Approach Section -->
 <section class="approach-section section-padding">
     <div class="approach-background">
         <div class="animated-gradient"></div>
@@ -94,7 +92,6 @@
     <span class="approach-orb orb-2"></span>
 </section>
 
-<!-- Stats Section -->
 <section class="stats-section section-padding">
     <div class="container">
         <div class="stats-grid">
@@ -148,7 +145,6 @@
     </div>
 </section>
 
-<!-- Reviews Grid -->
 <section class="reviews-section section-padding">
     <div class="container">
         <div class="section-header animate-on-scroll">
@@ -159,7 +155,6 @@
         </div>
         
         <div class="reviews-grid">
-            <!-- Review 1 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.1s;">
                 <div class="review-header">
                     <div class="review-avatar">
@@ -195,7 +190,6 @@
                 </div>
             </div>
             
-            <!-- Review 2 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.2s;">
                 <div class="review-header">
                     <div class="review-avatar">
@@ -232,7 +226,6 @@
                 </div>
             </div>
             
-            <!-- Review 3 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.3s;">
                 <div class="review-header">
                     <div class="review-avatar">
@@ -267,12 +260,10 @@
                 </div>
             </div>
             
-            <!-- Review 4 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.4s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- Branding icon: award/star badge -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 <circle cx="12" cy="12" r="10" stroke-opacity="0.2"/>
@@ -304,12 +295,10 @@
                 </div>
             </div>
             
-            <!-- Review 5 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.5s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- Media icon: play in rectangle -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="3" y="6" width="18" height="12" rx="2"/>
                                 <polygon points="10,9 16,12 10,15"/>
@@ -341,12 +330,10 @@
                 </div>
             </div>
             
-            <!-- Review 6 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.6s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- EdTech icon: graduation cap -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 10L12 5 2 10l10 5 10-5z"/>
                                 <path d="M6 12v5c0 .7 3 2 6 2s6-1.3 6-2v-5"/>
@@ -378,12 +365,10 @@
                 </div>
             </div>
             
-            <!-- Review 7 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.7s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- FinTech security icon -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 2l7 4v6c0 5-3.5 8-7 8s-7-3-7-8V6l7-4z"/>
                                 <path d="M9 12v-1a3 3 0 1 1 6 0v1"/>
@@ -414,12 +399,10 @@
                 </div>
             </div>
 
-            <!-- Review 8 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.8s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- Logistics route icon -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 7a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/>
                                 <path d="M10 7c0 4-6 9-6 9"/>
@@ -451,12 +434,10 @@
                 </div>
             </div>
 
-            <!-- Review 9 -->
             <div class="review-card glass-panel animate-on-scroll" style="animation-delay: 0.9s;">
                 <div class="review-header">
                     <div class="review-avatar">
                         <div class="avatar-placeholder">
-                            <!-- Healthcare heart pulse icon -->
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/>
                                 <path d="M7 12h2l1.5-3 2.5 6 1.5-3H17"/>
@@ -489,7 +470,6 @@
     </div>
 </section>
 
-<!-- Project Results Section -->
 <section class="results-section section-padding alt-bg">
     <div class="container">
         <div class="section-header animate-on-scroll">
@@ -534,7 +514,6 @@
         </div>
     </div>
 </section>
-<!-- Case Studies Section -->
 <section class="case-section section-padding">
     <div class="container">
         <div class="section-header animate-on-scroll">
@@ -549,7 +528,6 @@
         </div>
 
         <div class="case-cards has-tabs" id="caseCards">
-            <!-- Case 1 -->
             <article class="case-card active" data-case="case1">
                 <div class="case-media glass-panel">
                     <img src="img/case-1.webp" alt="SaaS – konversioiden nosto" loading="lazy">
@@ -573,7 +551,6 @@
                 </div>
             </article>
 
-            <!-- Case 2 -->
             <article class="case-card" data-case="case2">
                 <div class="case-media glass-panel">
                     <img src="img/case-2.webp" alt="E‑commerce – myynnin kasvu" loading="lazy">
@@ -597,7 +574,6 @@
                 </div>
             </article>
 
-            <!-- Case 3 -->
             <article class="case-card" data-case="case3">
                 <div class="case-media glass-panel">
                     <img src="img/case-3.webp" alt="EdTech – sitoutumisen kasvu" loading="lazy">
@@ -624,7 +600,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="cta-section">
     <div class="cta-background">
         <div class="animated-gradient"></div>

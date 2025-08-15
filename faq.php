@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -15,11 +14,9 @@
     </div>
 </section>
 
-<!-- FAQ Section -->
 <section class="faq-section section-padding faq-static">
     <div class="container">
         <div class="faq-content">
-            <!-- FAQ Categories -->
             <div class="faq-categories animate-on-scroll">
                 <button class="category-btn active" data-category="all">Kaikki</button>
                 <button class="category-btn" data-category="pricing">Hinnoittelu</button>
@@ -28,9 +25,7 @@
                 <button class="category-btn" data-category="support">Tuki</button>
             </div>
             
-            <!-- FAQ Items -->
             <div class="faq-container">
-                <!-- Pricing FAQs -->
                 <div class="faq-item glass-panel animate-on-scroll" data-category="pricing" id="pricing" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                         <span>Miten hinnoittelunne toimii?</span>
@@ -88,7 +83,6 @@
                     </div>
                 </div>
                 
-                <!-- Process FAQs -->
                 <div class="faq-item glass-panel animate-on-scroll" data-category="process" id="timeline" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
                         <span>Kuinka kauan projekti kestää?</span>
@@ -149,7 +143,6 @@
                     </div>
                 </div>
                 
-                <!-- Technical FAQs -->
                 <div class="faq-item glass-panel animate-on-scroll" data-category="technical" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
                         <span>Mitä teknologioita käytätte?</span>
@@ -210,7 +203,6 @@
                     </div>
                 </div>
                 
-                <!-- Support FAQs -->
                 <div class="faq-item glass-panel animate-on-scroll" data-category="support" id="support" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
                         <span>Millaista tukea tarjoatte lanseerauksen jälkeen?</span>
@@ -269,7 +261,6 @@
                     </div>
                 </div>
                 
-                <!-- General FAQs -->
                 <div class="faq-item glass-panel animate-on-scroll" data-category="general" style="animation-delay: 0.1s;">
                     <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
                         <span>Työskentelettekö kansainvälisten asiakkaiden kanssa?</span>
@@ -310,7 +301,6 @@
             </div>
         </div>
         
-        <!-- Still Have Questions -->
         <div class="faq-cta animate-on-scroll" style="animation-delay: 0.4s;">
             <div class="faq-cta-content glass-panel">
                 <h3>Eikö kysymyksesi löytynyt listalta?</h3>

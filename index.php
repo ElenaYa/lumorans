@@ -48,7 +48,6 @@ include 'header.php';
     </div>
 </section>
 
-<!-- Showcase Section -->
 <section class="showcase-section section-padding">
 	<div class="showcase-background">
 		<div class="grid-overlay"></div>
@@ -318,7 +317,6 @@ include 'header.php';
     </div>
 </section>
 
-<!-- Vision Section -->
 <section class="vision-section section-padding" style="padding-top: 0px;">
 	<div class="container">
 		<div class="vision-content">

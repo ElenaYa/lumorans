@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -15,7 +14,6 @@
     </div>
 </section>
 
-<!-- Intro Vision Section -->
 <section class="vision-section section-padding">
     <div class="container">
         <div class="vision-content">
@@ -64,11 +62,9 @@
     </div>
  </section>
 
-<!-- Contact Section -->
 <section class="contact-section section-padding">
     <div class="container">
         <div class="contact-content">
-            <!-- Contact Form -->
             <div class="contact-form-container animate-on-scroll">
                 <div class="form-header">
                     <h2 class="form-title">Lähetä Viesti</h2>
@@ -152,7 +148,6 @@
                 </form>
             </div>
             
-            <!-- Contact Info -->
             <div class="contact-info-container animate-on-scroll" style="animation-delay: 0.2s;">
                 <div class="contact-info glass-panel">
                     <h3 class="info-title">Yhteystiedot</h3>
@@ -197,7 +192,6 @@
                     </div>
                 </div>
            
-                <!-- FAQ Quick Links -->
                 <div class="faq-links glass-panel">
                     <h3 class="faq-title">Usein Kysytyt Kysymykset</h3>
                     <div class="faq-quick-links">
@@ -235,7 +229,6 @@
             
         </div>
              
-                <!-- Process Overview -->
                 <div class="process-overview glass-panel" style="margin-top: 40px;">
                     <h3 class="process-title">Miten Etenemme</h3>
                     <div class="process-steps">
@@ -276,7 +269,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="cta-section">
     <div class="cta-background">
         <div class="animated-gradient"></div>

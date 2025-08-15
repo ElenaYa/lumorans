@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -18,11 +17,9 @@
     </div>
 </section>
 
-<!-- Disclaimer Content -->
 <section class="legal-content section-padding">
     <div class="container">
         <div class="legal-document">
-            <!-- Table of Contents -->
             <div class="toc-container glass-panel animate-on-scroll">
                 <h3>Sisällysluettelo</h3>
                 <ul class="toc">
@@ -38,7 +35,6 @@
             </div>
             
             <div class="legal-sections">
-                <!-- General Disclaimer -->
                 <section id="general-disclaimer" class="legal-section animate-on-scroll">
                     <h2>1. Yleinen Vastuuvapauslauseke</h2>
                     
@@ -70,7 +66,6 @@
                     </ul>
                 </section>
                 
-                <!-- Website Content -->
                 <section id="website-content" class="legal-section animate-on-scroll">
                     <h2>2. Verkkosivuston Sisältö</h2>
                     
@@ -107,7 +102,6 @@
                     </div>
                 </section>
                 
-                <!-- Service Disclaimer -->
                 <section id="service-disclaimer" class="legal-section animate-on-scroll">
                     <h2>3. Palvelujen Vastuuvapauslauseke</h2>
                     
@@ -145,7 +139,6 @@
                     </div>
                 </section>
                 
-                <!-- Third Party -->
                 <section id="third-party" class="legal-section animate-on-scroll">
                     <h2>4. Kolmannen Osapuolen Sisältö</h2>
                     
@@ -182,7 +175,6 @@
                     </div>
                 </section>
                 
-                <!-- Technical Disclaimer -->
                 <section id="technical-disclaimer" class="legal-section animate-on-scroll">
                     <h2>5. Tekniset Vastuuvapauslausekkeet</h2>
                     
@@ -223,7 +215,6 @@
                     </ul>
                 </section>
                 
-                <!-- Professional Advice -->
                 <section id="professional-advice" class="legal-section animate-on-scroll">
                     <h2>6. Ammatillinen Neuvonta</h2>
                     
@@ -260,7 +251,6 @@
                     </div>
                 </section>
                 
-                <!-- Limitations -->
                 <section id="limitations" class="legal-section animate-on-scroll">
                     <h2>7. Vastuun Rajoitukset</h2>
                     
@@ -308,7 +298,6 @@
                     </div>
                 </section>
                 
-                <!-- Changes Disclaimer -->
                 <section id="changes-disclaimer" class="legal-section animate-on-scroll">
                     <h2>8. Muutokset Vastuuvapauslausekkeeseen</h2>
                     

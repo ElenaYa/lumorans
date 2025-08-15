@@ -28,7 +28,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
     
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-<body>
+<body class="<?php echo isset($current_page) && $current_page === 'index' ? 'home-page' : ''; ?>">
     <header class="main-header">
         <nav class="navbar glass-panel">
             <div class="nav-container">

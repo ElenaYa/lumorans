@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -18,11 +17,9 @@
     </div>
 </section>
 
-<!-- Terms Content -->
 <section class="legal-content section-padding">
     <div class="container">
         <div class="legal-document">
-            <!-- Table of Contents -->
             <div class="toc-container glass-panel animate-on-scroll">
                 <h3>Sisällysluettelo</h3>
                 <ul class="toc">
@@ -43,7 +40,6 @@
             </div>
             
             <div class="legal-sections">
-                <!-- Acceptance -->
                 <section id="acceptance" class="legal-section animate-on-scroll">
                     <h2>1. Ehtojen Hyväksyminen</h2>
                     <p>Nämä käyttöehdot ("Ehdot") määrittävät oikeuksesi ja velvollisuutesi käytettäessä Lumoransin ("me", "meidän", "yritys") verkkosivustoa lumorans.com ("Sivusto") ja palveluitamme ("Palvelut").</p>
@@ -71,7 +67,6 @@
                     </ul>
                 </section>
                 
-                <!-- Definitions -->
                 <section id="definitions" class="legal-section animate-on-scroll">
                     <h2>2. Määritelmät</h2>
                     <div class="definitions-list">
@@ -107,7 +102,6 @@
                     </div>
                 </section>
                 
-                <!-- Services -->
                 <section id="services" class="legal-section animate-on-scroll">
                     <h2>3. Palvelut</h2>
                     
@@ -143,7 +137,6 @@
                     <p>Palvelumme saattavat sisältää integraatioita kolmannen osapuolen palveluihin. Emme ole vastuussa näiden palveluiden toimivuudesta tai saatavuudesta.</p>
                 </section>
                 
-                <!-- User Obligations -->
                 <section id="user-obligations" class="legal-section animate-on-scroll">
                     <h2>4. Käyttäjän Velvollisuudet</h2>
                     
@@ -186,7 +179,6 @@
                     </ul>
                 </section>
                 
-                <!-- Intellectual Property -->
                 <section id="intellectual-property" class="legal-section animate-on-scroll">
                     <h2>5. Immateriaalisoikeudet</h2>
                     
@@ -227,7 +219,6 @@
                     </ul>
                 </section>
                 
-                <!-- Project Terms -->
                 <section id="project-terms" class="legal-section animate-on-scroll">
                     <h2>6. Projektiehdot</h2>
                     
@@ -277,7 +268,6 @@
                     </ul>
                 </section>
                 
-                <!-- Payment Terms -->
                 <section id="payment-terms" class="legal-section animate-on-scroll">
                     <h2>7. Maksuehdot</h2>
                     
@@ -335,7 +325,6 @@
                     <p>Kaikki hinnat sisältävät Suomen arvonlisäveron (24%), ellei toisin mainita. Kansainvälisissä tilauksissa verotus määräytyy asiakkaan sijainnin mukaan.</p>
                 </section>
                 
-                <!-- Warranties -->
                 <section id="warranties" class="legal-section animate-on-scroll">
                     <h2>8. Takuut ja Vastuunrajoitukset</h2>
                     
@@ -376,7 +365,6 @@
                     </ul>
                 </section>
                 
-                <!-- Liability -->
                 <section id="liability" class="legal-section animate-on-scroll">
                     <h2>9. Korvausvelvollisuus</h2>
                     
@@ -419,7 +407,6 @@
                     </ul>
                 </section>
                 
-                <!-- Confidentiality -->
                 <section id="confidentiality" class="legal-section animate-on-scroll">
                     <h2>10. Luottamuksellisuus</h2>
                     
@@ -455,7 +442,6 @@
                     <p>Henkilötietojen käsittely tapahtuu tietosuojakäytäntömme mukaisesti. Noudatamme GDPR:ää ja muita sovellettavia tietosuojasäädöksiä.</p>
                 </section>
                 
-                <!-- Termination -->
                 <section id="termination" class="legal-section animate-on-scroll">
                     <h2>11. Sopimuksen Päättäminen</h2>
                     
@@ -496,7 +482,6 @@
                     </ul>
                 </section>
                 
-                <!-- Governing Law -->
                 <section id="governing-law" class="legal-section animate-on-scroll">
                     <h2>12. Sovellettava Laki ja Riidanratkaisu</h2>
                     
@@ -530,7 +515,6 @@
                     </ul>
                 </section>
                 
-                <!-- Contact Terms -->
                 <section id="contact-terms" class="legal-section animate-on-scroll">
                     <h2>13. Yhteystiedot ja Yhteydenotto</h2>
                     

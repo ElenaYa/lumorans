@@ -3,7 +3,6 @@ http_response_code(404);
 include 'header.php'; 
 ?>
 
-<!-- 404 Error Section -->
 <section class="error-section">
     <div class="error-background">
         <div class="animated-gradient"></div>
@@ -38,7 +37,6 @@ include 'header.php';
                 </a>
             </div>
             
-            <!-- Search Box -->
             <div class="error-search glass-panel">
                 <h3>Etsi Sivustolta</h3>
                 <form class="search-form" action="index.php" method="get">
@@ -53,7 +51,6 @@ include 'header.php';
                 </form>
             </div>
             
-            <!-- Quick Links -->
             <div class="quick-links">
                 <h3>Suositut Sivut</h3>
                 <div class="links-grid">

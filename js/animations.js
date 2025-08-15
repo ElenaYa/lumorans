@@ -1,9 +1,7 @@
-// Lumorans - Animations JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    // Animation Controller
     class AnimationController {
         constructor() {
             this.observerOptions = {
@@ -31,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         handleReducedMotion() {
-            // Show all elements immediately for users who prefer reduced motion
+           
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             animatedElements.forEach(el => {
                 el.style.opacity = '1';
@@ -50,11 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }, this.observerOptions);
 
-                // Observe all animated elements
                 const animatedElements = document.querySelectorAll('.animate-on-scroll');
                 animatedElements.forEach(el => this.observer.observe(el));
             } else {
-                // Fallback for browsers without IntersectionObserver
                 this.initScrollFallback();
             }
         }
@@ -65,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 element.classList.add('animate');
                 
-                // Add specific animation classes based on data attributes
                 const animationType = element.dataset.animation;
                 if (animationType) {
                     element.classList.add(animationType);
                 }
                 
-                // Trigger custom event
                 element.dispatchEvent(new CustomEvent('elementAnimated', {
                     detail: { element, type: animationType }
                 }));
@@ -96,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             window.addEventListener('scroll', window.Lumorans.throttle(checkElements, 100));
-            checkElements(); // Check on load
+            checkElements(); 
         }
 
         initParticleEffects() {
@@ -114,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 
-                // Random positioning and animation
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.animationDelay = Math.random() * 20 + 's';
                 particle.style.animationDuration = (20 + Math.random() * 10) + 's';
@@ -124,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initMouseEffects() {
-            // Parallax mouse movement
             const parallaxElements = document.querySelectorAll('[data-parallax]');
             
             if (parallaxElements.length > 0) {
@@ -143,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // Magnetic effect for buttons
             const magneticElements = document.querySelectorAll('.magnetic');
             
             magneticElements.forEach(el => {
@@ -162,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initScrollEffects() {
-            // Parallax scrolling
             const parallaxElements = document.querySelectorAll('[data-scroll-speed]');
             
             if (parallaxElements.length > 0) {
@@ -177,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // Progress bar on scroll
             this.initScrollProgress();
         }
 
@@ -216,7 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     i++;
                 } else {
                     clearInterval(timer);
-                    // Remove cursor after typing
                     setTimeout(() => {
                         element.style.borderRight = 'none';
                     }, 1000);
@@ -225,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initCounterAnimations() {
-            // Support both .counter and .stat-number in image-stats
             const counters = document.querySelectorAll('.counter, .image-stats .stat-number');
             
             counters.forEach(counter => {
@@ -257,7 +244,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Scroll Reveal Animation Manager
     class ScrollRevealManager {
         constructor() {
             this.init();
@@ -301,7 +287,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Micro Interaction Manager
     class MicroInteractionManager {
         constructor() {
             this.init();
@@ -354,7 +339,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
-                // Check if input has value on load
                 if (input.value) {
                     input.parentElement.classList.add('focused');
                 }
@@ -390,7 +374,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Page Transition Manager
     class PageTransitionManager {
         constructor() {
             this.init();
@@ -402,7 +385,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initPageEnter() {
-            // Page enter animation
             document.body.classList.add('page-entering');
             
             setTimeout(() => {
@@ -412,7 +394,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initPageExit() {
-            // Smooth page transitions
             const links = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href$=".php"]');
             
             links.forEach(link => {
@@ -431,7 +412,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Text Animation Effects
     class TextAnimationEffects {
         constructor() {
             this.init();
@@ -480,7 +460,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Loading Animation Manager
     class LoadingAnimationManager {
         constructor() {
             this.init();
@@ -534,7 +513,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 images.forEach(img => imageObserver.observe(img));
             } else {
-                // Fallback: load all images immediately
                 images.forEach(img => {
                     img.src = img.dataset.src;
                     img.classList.add('loaded');
@@ -543,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Performance Optimization
     class AnimationPerformance {
         constructor() {
             this.init();
@@ -555,13 +532,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         optimizeAnimations() {
-            // Use will-change property for animated elements
             const animatedElements = document.querySelectorAll('.animate-on-scroll, .morphing-shape, .floating-particles');
             
             animatedElements.forEach(el => {
                 el.style.willChange = 'transform, opacity';
                 
-                // Remove will-change after animation
                 el.addEventListener('animationend', () => {
                     el.style.willChange = 'auto';
                 });
@@ -569,7 +544,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         handleVisibilityChange() {
-            // Pause animations when page is not visible
             document.addEventListener('visibilitychange', () => {
                 const animatedElements = document.querySelectorAll('.animated-gradient, .floating-particles');
                 
@@ -586,7 +560,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initialize all animation components
     function initializeAnimations() {
         new AnimationController();
         new ScrollRevealManager();
@@ -597,10 +570,8 @@ document.addEventListener('DOMContentLoaded', function() {
         new AnimationPerformance();
     }
 
-    // Start animations
     initializeAnimations();
 
-    // Global animation utilities
     window.LumoransAnimations = {
         fadeIn: (element, duration = 300) => {
             element.style.opacity = '0';

@@ -1,15 +1,12 @@
-// Lumorans - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    // Global variables
     const body = document.body;
     const header = document.querySelector('.main-header');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     
-    // Utility functions
     const debounce = (func, wait) => {
         let timeout;
         return function executedFunction(...args) {
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     };
 
-    // Mobile Navigation
     class MobileNavigation {
         constructor() {
             this.init();
@@ -51,27 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (navToggle && navMenu) {
                 navToggle.addEventListener('click', this.toggleMenu.bind(this));
                 
-                // Close menu when clicking on nav links
                 const navLinks = navMenu.querySelectorAll('.nav-link');
                 navLinks.forEach(link => {
                     link.addEventListener('click', this.closeMenu.bind(this));
                 });
 
-                // Prevent scroll bleed when touching inside the menu
                 navMenu.addEventListener('touchmove', (e) => {
                     if (navMenu.classList.contains('active')) {
                         e.stopPropagation();
                     }
                 }, { passive: false });
 
-                // Close menu when clicking outside
                 document.addEventListener('click', (e) => {
                     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                         this.closeMenu();
                     }
                 });
 
-                // Close menu on escape key
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape') {
                         this.closeMenu();
@@ -92,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.classList.toggle('active');
             body.classList.toggle('nav-open');
             
-            // Update aria-expanded
             const isExpanded = navMenu.classList.contains('active');
             navToggle.setAttribute('aria-expanded', isExpanded);
             navToggle.setAttribute('aria-controls', 'navMenu');
@@ -127,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Header Scroll Effects
     class HeaderEffects {
         constructor() {
             this.lastScrollTop = 0;
@@ -141,20 +131,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         handleScroll() {
-            // Skip header hide/show while mobile menu is open
             if (document.body.classList.contains('nav-open')) {
                 return;
             }
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Add/remove scrolled class
             if (scrollTop > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
 
-            // Hide/show header on scroll
             if (scrollTop > this.lastScrollTop && scrollTop > 200) {
                 header.classList.add('hidden');
             } else {
@@ -165,14 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Smooth Scrolling
     class SmoothScrolling {
         constructor() {
             this.init();
         }
 
         init() {
-            // Handle anchor links
             const anchorLinks = document.querySelectorAll('a[href^="#"]');
             anchorLinks.forEach(link => {
                 link.addEventListener('click', this.handleAnchorClick.bind(this));
@@ -199,39 +184,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
 
-                // Update URL without jumping
                 history.pushState(null, null, href);
             }
         }
     }
 
-    // Form Handling
     class FormHandler {
         constructor() {
             this.init();
         }
 
         init() {
-            // Newsletter form
             const newsletterForm = document.getElementById('newsletterForm');
             if (newsletterForm) {
                 newsletterForm.addEventListener('submit', this.handleNewsletterSubmit.bind(this));
             }
 
-            // Contact form
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', this.handleContactSubmit.bind(this));
             }
 
-            // Review form
             const reviewForm = document.getElementById('reviewForm');
             if (reviewForm) {
                 reviewForm.addEventListener('submit', this.handleReviewSubmit.bind(this));
                 this.initRatingSystem();
             }
 
-            // Form auto-save
             this.initAutoSave();
         }
 
@@ -250,10 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 this.showLoading(form);
                 
-                // Simulate API call
                 await this.delay(1000);
                 
-                // In real implementation, make actual API call here
                 this.showResponse(response, 'Kiitos! Uutiskirje tilattiin onnistuneesti.', 'success');
                 form.reset();
                 
@@ -279,10 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 this.showLoading(form);
                 
-                // Simulate API call
                 await this.delay(1500);
                 
-                // In real implementation, make actual API call here
                 this.showResponse(response, 'Viesti lähetetty onnistuneesti! Otamme yhteyttä pian.', 'success');
                 form.reset();
                 
@@ -308,10 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 this.showLoading(form);
                 
-                // Simulate API call
                 await this.delay(1200);
                 
-                // In real implementation, make actual API call here
                 this.showResponse(response, 'Arvostelu lähetetty! Kiitos palautteestasi.', 'success');
                 form.reset();
                 this.resetRating();
@@ -395,7 +368,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 1000));
                 });
 
-                // Load saved data
                 this.loadFormData(form);
             });
         }
@@ -468,7 +440,6 @@ document.addEventListener('DOMContentLoaded', function() {
             element.className = `form-response ${type}`;
             element.style.display = 'block';
             
-            // Auto-hide after 5 seconds
             setTimeout(() => {
                 element.style.display = 'none';
             }, 5000);
@@ -503,7 +474,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // FAQ Accordion
     class FAQAccordion {
         constructor() {
             this.init();
@@ -511,7 +481,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         init() {
             const faqItems = document.querySelectorAll('.faq-question');
-            // Collapse all by default
             faqItems.forEach(question => {
                 question.setAttribute('aria-expanded', 'false');
                 const answer = document.getElementById(question.getAttribute('aria-controls')) || question.nextElementSibling;
@@ -522,7 +491,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 question.addEventListener('click', this.toggleFAQ.bind(this));
             });
 
-            // Category filtering
             const categoryButtons = document.querySelectorAll('.category-btn');
             categoryButtons.forEach(btn => {
                 btn.addEventListener('click', this.filterFAQs.bind(this));
@@ -535,7 +503,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const icon = question.querySelector('.faq-icon');
             const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-            // Close other open FAQs (optional - remove for multi-open)
             const allQuestions = document.querySelectorAll('.faq-question');
             allQuestions.forEach(q => {
                 if (q !== question) {
@@ -546,7 +513,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Toggle current FAQ
             question.setAttribute('aria-expanded', (!isExpanded).toString());
             if (answer) {
                 if (!isExpanded) { answer.classList.add('active'); answer.setAttribute('aria-hidden', 'false'); }
@@ -554,7 +520,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             question.classList.toggle('active', !isExpanded);
 
-            // Animate icon
             if (icon) {
                 icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
             }
@@ -565,11 +530,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const clickedBtn = e.currentTarget;
             const category = clickedBtn.dataset.category;
             
-            // Update active button
             if (activeBtn) activeBtn.classList.remove('active');
             clickedBtn.classList.add('active');
 
-            // Filter FAQ items
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
                 if (category === 'all' || item.dataset.category === category) {
@@ -583,7 +546,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Search Functionality
     class SearchHandler {
         constructor() {
             this.init();
@@ -595,17 +557,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 form.addEventListener('submit', this.handleSearch.bind(this));
             });
 
-            // Tech tabs
             const techTabs = document.querySelectorAll('.tech-tab');
             const techCategories = document.getElementById('techCategories');
             if (techTabs.length && techCategories) {
                 techTabs.forEach(tab => {
                     tab.addEventListener('click', (e) => {
                         const target = tab.dataset.target;
-                        // activate tab
                         document.querySelectorAll('.tech-tab.active').forEach(t => t.classList.remove('active'));
                         tab.classList.add('active');
-                        // show category
                         techCategories.querySelectorAll('.tech-category').forEach(cat => {
                             cat.classList.toggle('active', cat.dataset.category === target);
                         });
@@ -613,7 +572,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // Case tabs
             const caseTabs = document.querySelectorAll('.case-tab');
             const caseCards = document.getElementById('caseCards');
             if (caseTabs.length && caseCards) {
@@ -629,7 +587,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
 
-            // FAQ accordion ensure collapsed by default
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(btn => {
                 const answerId = btn.getAttribute('aria-controls');
@@ -641,10 +598,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 btn.addEventListener('click', () => {
                     const expanded = btn.getAttribute('aria-expanded') === 'true';
-                    // collapse all in the same container
                     document.querySelectorAll('.faq-answer').forEach(a => { a.classList.remove('active'); a.setAttribute('aria-hidden', 'true'); });
                     document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(q => q.setAttribute('aria-expanded', 'false'));
-                    // toggle current
                     if (!expanded) {
                         btn.setAttribute('aria-expanded', 'true');
                         if (answer) { answer.classList.add('active'); answer.setAttribute('aria-hidden', 'false'); }
@@ -653,6 +608,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
+            this.initLegalTOCHighlight();
         }
 
         handleSearch(e) {
@@ -663,59 +619,66 @@ document.addEventListener('DOMContentLoaded', function() {
             const query = searchInput.value.trim();
             
             if (query) {
-                // In real implementation, perform search
-                console.log('Searching for:', query);
                 
-                // For now, redirect to homepage with search parameter
                 window.location.href = `index.php?search=${encodeURIComponent(query)}`;
             }
         }
+
+        initLegalTOCHighlight() {
+            const tocLinks = document.querySelectorAll('.toc a');
+            const sections = Array.from(document.querySelectorAll('.legal-sections .legal-section'));
+            if (!tocLinks.length || !sections.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = '#' + entry.target.id;
+                        tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === id));
+                    }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(sec => observer.observe(sec));
+        }
     }
 
-    // Performance Monitoring
     class PerformanceMonitor {
         constructor() {
             this.init();
         }
 
         init() {
-            // Monitor page load performance
             window.addEventListener('load', () => {
                 if ('performance' in window) {
                     const perfData = performance.getEntriesByType('navigation')[0];
-                    console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                   
                 }
             });
 
-            // Monitor Core Web Vitals (simplified)
             this.observeWebVitals();
         }
 
         observeWebVitals() {
-            // Largest Contentful Paint
             if ('PerformanceObserver' in window) {
                 const observer = new PerformanceObserver((list) => {
                     const entries = list.getEntries();
                     const lastEntry = entries[entries.length - 1];
-                    console.log('LCP:', lastEntry.startTime, 'ms');
                 });
                 
                 try {
                     observer.observe({ entryTypes: ['largest-contentful-paint'] });
                 } catch (e) {
-                    // Fallback for browsers that don't support LCP
                 }
             }
         }
     }
 
-    // Initialize all components
     function initializeApp() {
         new MobileNavigation();
         new HeaderEffects();
         new SmoothScrolling();
         new FormHandler();
-        // Disable accordion behavior on static FAQ page but keep category filter working
+        
         const faqSection = document.querySelector('.faq-section');
         if (!faqSection || !faqSection.classList.contains('faq-static')) {
             new FAQAccordion();
@@ -744,10 +707,8 @@ document.addEventListener('DOMContentLoaded', function() {
         new PerformanceMonitor();
     }
 
-    // Start the application
     initializeApp();
 
-    // Global utilities
     window.Lumorans = {
         debounce,
         throttle

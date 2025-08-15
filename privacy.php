@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -18,11 +17,9 @@
     </div>
 </section>
 
-<!-- Privacy Policy Content -->
 <section class="legal-content section-padding">
     <div class="container">
         <div class="legal-document">
-            <!-- Table of Contents -->
             <div class="toc-container glass-panel animate-on-scroll">
                 <h3>Sisällysluettelo</h3>
                 <ul class="toc">
@@ -42,7 +39,6 @@
             </div>
             
             <div class="legal-sections">
-                <!-- Introduction -->
                 <section id="intro" class="legal-section animate-on-scroll">
                     <h2>1. Johdanto</h2>
                     <p>Lumorans ("me", "meidän" tai "yritys") arvostaa yksityisyyttäsi ja sitoutuu suojelemaan henkilötietojasi. Tämä tietosuojakäytäntö kuvaa, miten keräämme, käytämme, säilytämme ja suojaamme henkilötietojasi, kun käytät verkkosivustoamme lumorans.com ("Palvelu") tai otat meihin yhteyttä.</p>
@@ -52,7 +48,6 @@
                     <p>Käyttämällä palveluamme hyväksyt tämän tietosuojakäytännön mukaiset käytännöt. Jos et hyväksy näitä käytäntöjä, älä käytä palveluamme.</p>
                 </section>
                 
-                <!-- Data Controller -->
                 <section id="data-controller" class="legal-section animate-on-scroll">
                     <h2>2. Rekisterinpitäjä</h2>
                     <div class="contact-box glass-panel">
@@ -65,7 +60,6 @@
                     <p>Lumorans toimii rekisterinpitäjänä kaikkien verkkosivustomme kautta kerättyjen henkilötietojen osalta. Olemme vastuussa henkilötietojesi käsittelystä tämän tietosuojakäytännön mukaisesti.</p>
                 </section>
                 
-                <!-- Data Collected -->
                 <section id="data-collected" class="legal-section animate-on-scroll">
                     <h2>3. Kerättävät Tiedot</h2>
                     <p>Keräämme seuraavantyyppisiä henkilötietoja:</p>
@@ -95,7 +89,6 @@
                     </ul>
                 </section>
                 
-                <!-- Data Use -->
                 <section id="data-use" class="legal-section animate-on-scroll">
                     <h2>4. Tietojen Käyttötarkoitus</h2>
                     <p>Käytämme henkilötietojasi seuraaviin tarkoituksiin:</p>
@@ -134,7 +127,6 @@
                     </ul>
                 </section>
                 
-                <!-- Legal Basis -->
                 <section id="legal-basis" class="legal-section animate-on-scroll">
                     <h2>5. Käsittelyn Oikeusperusta</h2>
                     <p>Henkilötietojesi käsittely perustuu seuraaviin oikeusperusteisiin:</p>
@@ -162,7 +154,6 @@
                     </div>
                 </section>
                 
-                <!-- Data Sharing -->
                 <section id="data-sharing" class="legal-section animate-on-scroll">
                     <h2>6. Tietojen Luovuttaminen</h2>
                     <p>Emme myy, vuokraa tai luovuta henkilötietojasi kolmansille osapuolille kaupallisiin tarkoituksiin. Tietoja voidaan kuitenkin jakaa seuraavissa tilanteissa:</p>
@@ -190,7 +181,6 @@
                     <p>Voimme jakaa tietojasi muille osapuolille, jos olet antanut siihen nimenomaisen suostumuksen.</p>
                 </section>
                 
-                <!-- Data Retention -->
                 <section id="data-retention" class="legal-section animate-on-scroll">
                     <h2>7. Tietojen Säilyttäminen</h2>
                     <p>Säilytämme henkilötietojasi vain niin kauan kuin on tarpeen käsittelyn tarkoitusten täyttämiseksi tai lain vaatimana:</p>
@@ -224,7 +214,6 @@
                     <p>Tietojen säilyttämisaika voi pidentyä, jos se on tarpeen oikeusvaatimusten selvittämiseksi tai lakisääteisten velvoitteiden täyttämiseksi.</p>
                 </section>
                 
-                <!-- Data Security -->
                 <section id="data-security" class="legal-section animate-on-scroll">
                     <h2>8. Tietojen Suojaaminen</h2>
                     <p>Käytämme asianmukaisia teknisiä ja organisatorisia toimenpiteitä henkilötietojesi suojaamiseksi:</p>
@@ -250,7 +239,6 @@
                     <p>Jos henkilötietomurto tapahtuu, joka todennäköisesti aiheuttaa korkean riskin henkilöiden oikeuksille ja vapauksille, ilmoitamme siitä viranomaisille 72 tunnin kuluessa ja rekisteröidyille viipymättä.</p>
                 </section>
                 
-                <!-- Cookies -->
                 <section id="cookies" class="legal-section animate-on-scroll">
                     <h2>9. Evästeet</h2>
                     <p>Käytämme evästeitä sivuston toiminnallisuuden ja käyttökokemuksen parantamiseksi. Lisätiedot evästeistä löydät <a href="cookies.php">evästekäytännöstämme</a>.</p>
@@ -267,7 +255,6 @@
                     <p>Voit hallita evästeasetuksia sivustomme evästehallintapaneelista tai selaimesi asetuksista. Huomaa, että evästeiden estäminen voi vaikuttaa sivuston toimivuuteen.</p>
                 </section>
                 
-                <!-- User Rights -->
                 <section id="user-rights" class="legal-section animate-on-scroll">
                     <h2>10. Rekisteröidyn Oikeudet</h2>
                     <p>Sinulla on seuraavat oikeudet henkilötietojesi käsittelyyn liittyen:</p>
@@ -318,7 +305,6 @@
                     <p>Voit käyttää oikeuksiasi ottamalla yhteyttä osoitteeseen admin@lumorans.com. Vastaamme pyyntöösi 30 päivän kuluessa ja maksuton, ellei pyyntö ole ilmeisen perusteeton tai kohtuuton.</p>
                 </section>
                 
-                <!-- Contact -->
                 <section id="contact" class="legal-section animate-on-scroll">
                     <h2>11. Yhteystiedot</h2>
                     <p>Jos sinulla on kysymyksiä tästä tietosuojakäytännöstä tai henkilötietojesi käsittelystä, ota yhteyttä:</p>
@@ -339,7 +325,6 @@
                     </div>
                 </section>
                 
-                <!-- Changes -->
                 <section id="changes" class="legal-section animate-on-scroll">
                     <h2>12. Muutokset Käytäntöön</h2>
                     <p>Voimme päivittää tätä tietosuojakäytäntöä tarpeen mukaan vastaamaan muuttuvia olosuhteita, liiketoimintakäytäntöjä tai lakisääteisiä vaatimuksia.</p>

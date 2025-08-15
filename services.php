@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -15,7 +14,6 @@
     </div>
 </section>
 
-<!-- Services Overview -->
 <section class="services-overview section-padding">
     <div class="container">
         <div class="services-intro animate-on-scroll">
@@ -73,7 +71,6 @@
     </div>
 </section>
 
-<!-- Web Design Service -->
 <section id="web-design" class="service-detail section-padding">
     <div class="container">
         <div class="service-detail-content accent-frame">
@@ -151,7 +148,6 @@
     </div>
 </section>
 
-<!-- App Design Service -->
 <section id="app-design" class="service-detail section-padding alt-bg">
     <div class="container">
         <div class="service-detail-content reverse accent-frame">
@@ -227,7 +223,6 @@
     </div>
 </section>
 
-<!-- UI/UX Design Service -->
 <section id="ui-ux" class="service-detail section-padding">
     <div class="container">
         <div class="service-detail-content accent-frame">
@@ -304,7 +299,6 @@
     </div>
 </section>
 
-<!-- Branding Service -->
 <section id="branding" class="service-detail section-padding alt-bg">
     <div class="container">
         <div class="service-detail-content reverse accent-frame">
@@ -383,7 +377,6 @@
     </div>
 </section>
 
-<!-- Process Section -->
 <section class="service-process section-padding">
     <div class="container">
         <div class="section-header animate-on-scroll">
@@ -441,7 +434,6 @@
     </div>
 </section>
 
-<!-- Wireframing & Prototyping Section -->
 <section class="wire-section section-padding alt-bg">
     <div class="container">
         <div class="wire-grid accent-frame">
@@ -514,7 +506,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="cta-section">
     <div class="cta-background">
         <div class="animated-gradient"></div>
