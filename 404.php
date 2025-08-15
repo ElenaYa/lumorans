@@ -36,60 +36,6 @@ include 'header.php';
                     <span>Ota Yhteyttä</span>
                 </a>
             </div>
-            
-            <div class="error-search glass-panel">
-                <h3>Etsi Sivustolta</h3>
-                <form class="search-form" action="index.php" method="get">
-                    <input type="text" name="search" placeholder="Mitä etsit?" class="search-input">
-                    <button type="submit" class="search-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="m21 21-4.35-4.35"/>
-                        </svg>
-                        Etsi
-                    </button>
-                </form>
-            </div>
-            
-            <div class="quick-links">
-                <h3>Suositut Sivut</h3>
-                <div class="links-grid">
-                    <a href="services.php" class="quick-link glass-panel">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                            <polyline points="2,17 12,22 22,17"/>
-                            <polyline points="2,12 12,17 22,12"/>
-                        </svg>
-                        <span>Palvelut</span>
-                    </a>
-                    
-                    <a href="about.php" class="quick-link glass-panel">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                        <span>Tietoa Meistä</span>
-                    </a>
-                    
-                    <a href="reviews.php" class="quick-link glass-panel">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                        <span>Arvostelut</span>
-                    </a>
-                    
-                    <a href="faq.php" class="quick-link glass-panel">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                            <line x1="12" y1="17" x2="12.01" y2="17"/>
-                        </svg>
-                        <span>FAQ</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 </section>

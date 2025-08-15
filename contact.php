@@ -22,47 +22,12 @@
                 <p class="vision-lead">
                     Rakennamme kestäviä, kauniita ja nopeita digitaalisia kokemuksia yhdistämällä selkeän strategian, tinkimättömän designin ja tehokkaan toteutuksen. Kerro mitä haluat saavuttaa – me autamme jalostamaan sen selkeäksi tiekartaksi ja viemään sen läpi huolella, sprintti sprintiltä.
                 </p>
-                <div class="vision-points">
-                    <div class="vision-point glass-panel">
-                        <div class="vision-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
-                        </div>
-                        <div>
-                            <h4>Selkeä suunta</h4>
-                            <p>Autamme sanoittamaan tavoitteen ja rajaamaan työn – näin eteneminen on läpinäkyvää.</p>
-                        </div>
-                    </div>
-                    <div class="vision-point glass-panel">
-                        <div class="vision-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h6l3 8 3-16 3 8h3"/></svg>
-                        </div>
-                        <div>
-                            <h4>Nopea iterointi</h4>
-                            <p>Pienet releaset, jatkuva palaute ja mitattava edistyminen jokaisessa vaiheessa.</p>
-                        </div>
-                    </div>
-                    <div class="vision-point glass-panel">
-                        <div class="vision-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
-                        </div>
-                        <div>
-                            <h4>Laadun varmistus</h4>
-                            <p>Design-testaus, saavutettavuus ja suorituskyky sisäänrakennettuna prosessiin.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="vision-visual">
-                <div class="vision-image-container">
-                    <img src="img/futuristic-image.webp" alt="Vision" class="vision-image" loading="lazy" width="520" height="360">
-                    <div class="vision-image-overlay"></div>
-                </div>
             </div>
         </div>
     </div>
  </section>
 
-<section class="contact-section section-padding">
+<section class="contact-section section-padding" style="padding-top: 0px;">
     <div class="container">
         <div class="contact-content">
             <div class="contact-form-container animate-on-scroll">
