@@ -601,6 +601,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
             }
+
+            // Case tabs
+            const caseTabs = document.querySelectorAll('.case-tab');
+            const caseCards = document.getElementById('caseCards');
+            if (caseTabs.length && caseCards) {
+                caseTabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const target = tab.dataset.target;
+                        document.querySelectorAll('.case-tab.active').forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        caseCards.querySelectorAll('.case-card').forEach(card => {
+                            card.classList.toggle('active', card.dataset.case === target);
+                        });
+                    });
+                });
+            }
         }
 
         handleSearch(e) {
