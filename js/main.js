@@ -583,6 +583,24 @@ document.addEventListener('DOMContentLoaded', function() {
             searchForms.forEach(form => {
                 form.addEventListener('submit', this.handleSearch.bind(this));
             });
+
+            // Tech tabs
+            const techTabs = document.querySelectorAll('.tech-tab');
+            const techCategories = document.getElementById('techCategories');
+            if (techTabs.length && techCategories) {
+                techTabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        const target = tab.dataset.target;
+                        // activate tab
+                        document.querySelectorAll('.tech-tab.active').forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        // show category
+                        techCategories.querySelectorAll('.tech-category').forEach(cat => {
+                            cat.classList.toggle('active', cat.dataset.category === target);
+                        });
+                    });
+                });
+            }
         }
 
         handleSearch(e) {

@@ -225,7 +225,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         initCounterAnimations() {
-            const counters = document.querySelectorAll('.counter');
+            // Support both .counter and .stat-number in image-stats
+            const counters = document.querySelectorAll('.counter, .image-stats .stat-number');
             
             counters.forEach(counter => {
                 this.observer.observe(counter);
@@ -236,9 +237,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         animateCounter(element) {
-            const target = parseInt(element.dataset.target) || parseInt(element.textContent);
-            const duration = parseInt(element.dataset.duration) || 2000;
-            const increment = target / (duration / 16); // 60fps
+            const originalText = element.textContent.trim();
+            const numericMatch = originalText.match(/\d+/);
+            if (!numericMatch) return;
+            const target = parseInt(element.dataset.target) || parseInt(numericMatch[0]);
+            const suffix = originalText.replace(/\d+/, '');
+            const duration = parseInt(element.dataset.duration) || 1500;
+            const increment = target / (duration / 16);
             
             let current = 0;
             const timer = setInterval(() => {
@@ -247,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     current = target;
                     clearInterval(timer);
                 }
-                element.textContent = Math.floor(current);
+                element.textContent = `${Math.floor(current)}${suffix}`;
             }, 16);
         }
     }

@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-<!-- Page Header -->
 <section class="page-header">
     <div class="page-header-background">
         <div class="animated-gradient"></div>
@@ -15,7 +14,6 @@
     </div>
 </section>
 
-<!-- Mission Section -->
 <section class="mission-section section-padding">
     <div class="container">
         <div class="mission-content">
@@ -86,11 +84,10 @@
     </div>
 </section>
 
-<!-- Process Section -->
-<section class="process-section section-padding">
+<section class="process-section section-padding" style="padding-top: 0px;">
     <div class="container">
         <div class="section-header animate-on-scroll">
-            <h2 class="section-title">Työskentelyprosessimme</h2>
+            <h2 class="section-title" style="font-size: 1.8rem;">Työskentelyprosessimme</h2>
             <p class="section-description">
                 Strukturoitu ja läpinäkyvä prosessi, joka varmistaa erinomaisen lopputuloksen jokaisessa projektissa
             </p>
@@ -98,7 +95,7 @@
         
         <div class="process-timeline">
             <div class="process-step animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="step-number">01</div>
+            <div class="step-number">01</div>
                 <div class="step-content glass-panel">
                     <h3 class="step-title">Kartoitus & Suunnittelu</h3>
                     <p class="step-description">
@@ -165,8 +162,7 @@
     </div>
 </section>
 
-<!-- Technology Section -->
-<section class="technology-section section-padding">
+<section class="technology-section section-padding" style="padding-top: 0px;">
     <div class="container">
         <div class="section-header animate-on-scroll">
             <h2 class="section-title">Teknologiaosaaminen</h2>
@@ -174,52 +170,167 @@
                 Hyödynnämme alan johtavia teknologioita ja työkaluja luodaksemme huippuluokan digitaalisia ratkaisuja
             </p>
         </div>
+
+        <div class="tech-tabs" id="techTabs">
+            <button class="tech-tab active" data-target="frontend">Frontend</button>
+            <button class="tech-tab" data-target="mobile">Mobiili</button>
+            <button class="tech-tab" data-target="design">Design</button>
+        </div>
         
-        <div class="tech-categories">
-            <div class="tech-category animate-on-scroll" style="animation-delay: 0.1s;">
+        <div class="tech-categories has-tabs" id="techCategories">
+            <div class="tech-category active" data-category="frontend">
                 <div class="tech-header">
                     <h3 class="tech-title">Frontend Teknologiat</h3>
                 </div>
                 <div class="tech-items">
-                    <span class="tech-item glass-panel">React</span>
-                    <span class="tech-item glass-panel">Vue.js</span>
-                    <span class="tech-item glass-panel">Next.js</span>
-                    <span class="tech-item glass-panel">TypeScript</span>
-                    <span class="tech-item glass-panel">Tailwind CSS</span>
-                    <span class="tech-item glass-panel">Framer Motion</span>
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Vue.js</span>
+                    <span class="tech-item">Next.js</span>
+                    <span class="tech-item">TypeScript</span>
+                    <span class="tech-item">Tailwind CSS</span>
+                    <span class="tech-item">Framer Motion</span>
                 </div>
             </div>
             
-            <div class="tech-category animate-on-scroll" style="animation-delay: 0.2s;">
+            <div class="tech-category" data-category="mobile">
                 <div class="tech-header">
                     <h3 class="tech-title">Mobiili Kehitys</h3>
                 </div>
                 <div class="tech-items">
-                    <span class="tech-item glass-panel">React Native</span>
-                    <span class="tech-item glass-panel">Flutter</span>
-                    <span class="tech-item glass-panel">Swift</span>
-                    <span class="tech-item glass-panel">Kotlin</span>
-                    <span class="tech-item glass-panel">Expo</span>
+                    <span class="tech-item">React Native</span>
+                    <span class="tech-item">Flutter</span>
+                    <span class="tech-item">Swift</span>
+                    <span class="tech-item">Kotlin</span>
+                    <span class="tech-item">Expo</span>
                 </div>
             </div>
             
-            <div class="tech-category animate-on-scroll" style="animation-delay: 0.3s;">
+            <div class="tech-category" data-category="design">
                 <div class="tech-header">
                     <h3 class="tech-title">Design Työkalut</h3>
                 </div>
                 <div class="tech-items">
-                    <span class="tech-item glass-panel">Figma</span>
-                    <span class="tech-item glass-panel">Adobe XD</span>
-                    <span class="tech-item glass-panel">Sketch</span>
-                    <span class="tech-item glass-panel">Principle</span>
-                    <span class="tech-item glass-panel">After Effects</span>
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">Adobe XD</span>
+                    <span class="tech-item">Sketch</span>
+                    <span class="tech-item">Principle</span>
+                    <span class="tech-item">After Effects</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
+<section class="about-showcase section-padding" style="padding-top: 0px;">
+    <div class="container">
+        <div class="about-showcase-grid">
+            <div class="showcase-text animate-on-scroll">
+                <h2 class="section-title">Luovuus x Teknologia</h2>
+                <p class="section-description">
+                    Yhdistämme datalähtöisen ajattelun ja kokeilevan designin. Visualisoimme ideat nopeasti ja
+                    jalostamme ne tuotantovalmiiksi ratkaisuiksi elegantilla toteutuksella.
+                </p>
+                <ul class="showcase-points">
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l6 6L21 6"/></svg>
+                        Prototypointi ja validointi ennen kehitystä
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-6m0-4V4m0 6h8M4 10h8"/></svg>
+                        Animoidut mikrokokemukset ja vuorovaikutus
+                    </li>
+                    <li>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15A7 7 0 1 1 21 12"/></svg>
+                        Suorituskyky ja saavutettavuus vakiona
+                    </li>
+                </ul>
+            </div>
+            <div class="showcase-media animate-on-scroll" style="animation-delay:.15s;">
+                <div class="showcase-image glass-panel">
+                    <img src="img/futuristic-image.webp" alt="Futuristinen visualisointi" loading="lazy">
+                    <span class="showcase-glow"></span>
+                    <span class="showcase-orb orb-a"></span>
+                    <span class="showcase-orb orb-b"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="showcase-bg">
+        <div class="animated-gradient"></div>
+    </div>
+    
+</section>
+
+<section class="about-highlights section-padding" style="padding-top: 0px;">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2 class="section-title">Miksi Lumorans?</h2>
+            <p class="section-description">Ei vain kaunis käyttöliittymä – vaan kokonaisvaltainen kokemus ja mitattava arvo.</p>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-card glass-panel animate-on-scroll" style="animation-delay:.05s;">
+                <div class="highlight-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27,6.96 12,12.01 20.73,6.96"/></svg>
+                </div>
+                <h3 class="highlight-title">Tuotetason laatu</h3>
+                <p class="highlight-desc">Rakennamme skaalautuvia ratkaisuja moderneilla arkkitehtuureilla ja laadukkaalla koodilla.</p>
+            </div>
+            <div class="highlight-card glass-panel animate-on-scroll" style="animation-delay:.1s;">
+                <div class="highlight-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <h3 class="highlight-title">Ketterä yhteistyö</h3>
+                <p class="highlight-desc">Tiivis kommunikaatio, läpinäkyvä eteneminen ja nopeat iteraatiot.</p>
+            </div>
+            <div class="highlight-card glass-panel animate-on-scroll" style="animation-delay:.15s;">
+                <div class="highlight-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9c-3 0-5 4-8 4-2 0-3-2-5-2"/></svg>
+                </div>
+                <h3 class="highlight-title">Data ja tulokset</h3>
+                <p class="highlight-desc">Mittaamme vaikutusta ja optimoimme konversiota, ei vain pikseleitä.</p>
+            </div>
+            <div class="highlight-card glass-panel animate-on-scroll" style="animation-delay:.2s;">
+                <div class="highlight-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"/></svg>
+                </div>
+                <h3 class="highlight-title">Erottuva visuaalisuus</h3>
+                <p class="highlight-desc">Neon-akentit, glassmorphism ja harkittu animaatio luovat muistettavan kokemuksen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="manifest-section section-padding" style="padding-top: 0px;">
+	<div class="container">
+		<div class="manifest-card glass-panel animate-on-scroll">
+			<h2 class="manifest-title"><span class="manifest-gradient">Manifestimme</span></h2>
+			<p class="manifest-lead">
+				Ensimmäinen periaatteemme on yksinkertainen: <span class="text-glow">kauneus palvelee tarkoitusta</span>. Muoto noudattaa
+				toimintaa, mutta ei koskaan uhraa tunnetta. Rakennamme käyttöliittymiä, jotka tuntuvat vaivattomilta –
+				koska ne on suunniteltu ihmisille, eivät järjestelmille.
+			</p>
+			<p class="manifest-paragraph">
+				Toinen periaate: <span class="marker">laatu on prosessi</span>. Siksi työnkulkumme ovat läpinäkyviä, komponenttimme
+				modulaarisia ja animaatiomme harkittuja. Jokainen yksityiskohta kertoo tarinaa, joka tekee tuotteesta nopeamman,
+				saavutettavamman ja ilmeikkäämmän.
+			</p>
+			<p class="manifest-paragraph">
+				Kolmas periaate: <span class="marker">mittaamme vaikutusta</span>. Käytettävyystestaus ja analytiikka ohjaavat päätöksiämme – jotta visio
+				muuttuu tulokseksi.
+			</p>
+			<div class="manifest-meta">
+				<span class="meta-item">Design System</span>
+				<span class="meta-item">Performance</span>
+				<span class="meta-item">Accessibility</span>
+				<span class="meta-item">Motion</span>
+			</div>
+			<span class="manifest-accent"></span>
+		</div>
+	</div>
+	<div class="manifest-orb orb-1"></div>
+	<div class="manifest-orb orb-2"></div>
+</section>
+
 <section class="cta-section">
     <div class="cta-background">
         <div class="animated-gradient"></div>
@@ -232,14 +343,14 @@
                 Olemme valmiita kuulemaan projektistasi ja auttamaan sinua saavuttamaan digitaaliset tavoitteesi.
             </p>
             <div class="cta-actions">
-                <a href="contact.php" class="cta-primary">
+                <a href="contact.php" class="btn btn-primary">
                     <span>Ota Yhteyttä</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="services.php" class="cta-secondary">
+                <a href="services.php" class="btn btn-secondary">
                     <span>Tutustu Palveluihin</span>
                 </a>
             </div>

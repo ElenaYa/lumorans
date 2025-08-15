@@ -2,7 +2,6 @@
 
     <footer class="main-footer">
         <div class="footer-container">
-            <!-- Newsletter Section -->
             <section class="newsletter-section glass-panel">
                 <div class="newsletter-content">
                     <h3 class="newsletter-title">Tilaa Uutiskirjeemme</h3>
@@ -24,12 +23,14 @@
                 </div>
             </section>
 
-            <!-- Footer Content -->
             <div class="footer-content">
                 <div class="footer-grid">
                     <div class="footer-column">
                         <div class="footer-brand">
-                            <h3 class="brand-name">Lumorans</h3>
+                        <a href="index.php" class="brand-link">
+                        <img src="img/logo-lum.webp" alt="Lumorans" class="brand-logo" width="32" height="32" loading="eager">
+                        <span class="brand-text">Lumorans</span>
+                    </a>
                             <p class="brand-description">
                                 Futuristinen web- ja app-suunnittelustudio, joka luo unohtumattomia digitaalisia kokemuksia huipputeknologialla ja innovatiivisella designilla.
                             </p>
@@ -87,7 +88,6 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
     <div class="cookie-banner glass-panel" id="cookieBanner">
         <div class="cookie-content">
             <div class="cookie-text">
@@ -103,7 +103,6 @@
         </div>
     </div>
 
-    <!-- Cookie Settings Modal -->
     <div class="cookie-modal" id="cookieModal">
         <div class="cookie-modal-content glass-panel">
             <div class="cookie-modal-header">
@@ -163,7 +162,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/cookies.js"></script>

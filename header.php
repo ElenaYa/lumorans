@@ -26,7 +26,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
   
     <link rel="stylesheet" href="css/complete-styles.css">
     
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -34,6 +34,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
             <div class="nav-container">
                 <div class="nav-brand">
                     <a href="index.php" class="brand-link">
+                        <img src="img/logo-lum.webp" alt="Lumorans" class="brand-logo" width="32" height="32" loading="eager">
                         <span class="brand-text">Lumorans</span>
                     </a>
                 </div>
