@@ -64,7 +64,7 @@
             <div class="mission-visual animate-on-scroll" style="animation-delay: 0.2s;">
                 <div class="about-image-container glass-panel">
                     <img src="img/about-image.webp" alt="Lumorans tiimi työssä" loading="lazy">
-                    <div class="image-stats">
+                    <div class="image-stats" style="padding-bottom: 1rem;">
                         <div class="stat-item">
                             <span class="stat-number">50+</span>
                             <span class="stat-label">Onnistunutta Projektia</span>
